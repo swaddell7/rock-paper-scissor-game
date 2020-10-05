@@ -80,3 +80,14 @@ header > h1 {
   font-size: 20px;
   margin-top: 20px;
 }
+
+.result {
+  font-size: 40px;
+  color: white;
+}
+
+.result > p {
+  text-align: center;
+  font-weight: bold;
+  font-family: Asap, sans-serif;
+}
