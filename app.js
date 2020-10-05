@@ -24,15 +24,24 @@ function win(user, computer) {
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = `${convertToWord(user)} beats ${convertToWord(computer)}. You win!`;
+  const smallUserWord = "user".fontsize(3).sup();
+  const smallCompWord = "computer".fontsize(3).sup();
+  result_p.innerHTML = `${convertToWord(user)} ${smallUserWord} beats ${convertToWord(computer)} ${smallCompWord}. You win!`;
 }
 
 function lose(user, computer) {
   computerScore++;
+  computerScore_span.innerHTML = computerScore;
+  userScore_span.innerHTML = userScore;
+  const smallUserWord = "user".fontsize(3).sup();
+  const smallCompWord = "computer".fontsize(3).sup();
+  result_p.innerHTML = `${convertToWord(computer)} ${smallCompWord} beats ${convertToWord(user)} ${smallUserWord}. You lose.`;
 }
 
 function draw(user, computer) {
-  console.log("DRAW");
+  computerScore_span.innerHTML = computerScore;
+  userScore_span.innerHTML = userScore;
+  result_p.innerHTML = "It's a draw!";
 }
 
 function game(userChoice) {
